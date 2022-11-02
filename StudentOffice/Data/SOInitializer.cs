@@ -5,229 +5,7 @@ using StudentOffice.Models;
 
 namespace StudentOffice.Data
 {
-    //public static class SOInitializer
-    //{
-    //    public static void Seed(IApplicationBuilder applicationBuilder)
-    //    {
-    //        StudentOfficeContext context = applicationBuilder.ApplicationServices.CreateScope()
-    //            .ServiceProvider.GetRequiredService<StudentOfficeContext>();
-
-
-    //        //To randomly generate data
-    //        Random random = new Random();
-
-    //        if (!context.EmployeeRoles.Any())
-    //        {
-    //            context.EmployeeRoles.AddRange(
-    //             new EmployeeRole
-    //             {
-    //                 RoleName = "Account Manager"
-    //             }, new EmployeeRole
-    //             {
-    //                 RoleName = "Production Manager"
-    //             }, new EmployeeRole
-    //             {
-    //                 RoleName = "Designer"
-    //             }, new EmployeeRole
-    //             {
-    //                 RoleName = "Technician"
-    //             }, new EmployeeRole
-    //             {
-    //                 RoleName = "Jr. Technician"
-    //             }, new EmployeeRole
-    //             {
-    //                 RoleName = "Engineer"
-    //             }, new EmployeeRole
-    //             {
-    //                 RoleName = "Jr. Engineer"
-    //             }, new EmployeeRole
-    //             {
-    //                 RoleName = "Developer"
-    //             }, new EmployeeRole
-    //             {
-    //                 RoleName = "Security Analyst"
-    //             }, new EmployeeRole
-    //             {
-    //                 RoleName = "Tester"
-    //             }
-    //             );
-    //            context.SaveChanges();
-    //        }
-
-    //        if (!context.Teams.Any())
-    //        {
-    //            context.Teams.AddRange(
-    //            new Team
-    //            {
-    //                FirstName = "1",
-    //                LastName = "Management"
-    //            },
-    //            new Team
-    //            {
-    //                FirstName = "2",
-    //                LastName = "Marketing"
-    //            },
-    //            new Team
-    //            {
-    //                FirstName = "3",
-    //                LastName = "Support"
-    //            }
-    //            ,
-    //            new Team
-    //            {
-    //                FirstName = "4",
-    //                LastName = "FrontEnd"
-    //            }
-    //            ,
-    //            new Team
-    //            {
-    //                FirstName = "5",
-    //                LastName = "BackEnd"
-    //            }
-    //            ,
-    //            new Team
-    //            {
-    //                FirstName = "6",
-    //                LastName = "Testing"
-    //            }
-    //            ,
-    //            new Team
-    //            {
-    //                FirstName = "7",
-    //                LastName = "UxDesing"
-    //            }
-    //            ,
-    //            new Team
-    //            {
-    //                FirstName = "8",
-    //                LastName = "DevOpps"
-    //            }
-    //            ,
-    //            new Team
-    //            {
-    //                FirstName = "9",
-    //                LastName = "Security"
-    //            }
-    //            ,
-    //            new Team
-    //            {
-    //                FirstName = "10",
-    //                LastName = "Incident Response"
-    //            }
-    //            ,
-    //            new Team
-    //            {
-    //                FirstName = "11",
-    //                LastName = "System Desing"
-    //            }
-    //            ,
-    //            new Team
-    //            {
-    //                FirstName = "12",
-    //                LastName = "Business Analyse"
-    //            }
-    //            );
-    //            context.SaveChanges();
-    //        }
-            
-           
-    //         if (!context.Employees.Any())
-    //        {
-    //            context.Employees.AddRange(
-    //            new Employee
-    //            {
-    //                FirstName = "Fred",
-    //                MiddleName = "Reginald",
-    //                LastName = "Flintstone",
-    //                EmployeeNumber = "1231231234",
-    //                DOB = DateTime.Parse("1955-09-01"),
-    //                SuggestionNumber = 6,
-    //                Phone = "9055551212",
-    //                EmployeeRoleID = context.EmployeeRoles.FirstOrDefault(d => d.RoleName.Contains("Tester")).ID,
-    //                TeamID = context.Teams.FirstOrDefault(d => d.FirstName == "1" && d.LastName == "Management").ID
-    //                //TeamID = 1,
-    //            },
-    //            new Employee
-    //            {
-    //                FirstName = "Wilma",
-    //                MiddleName = "Jane",
-    //                LastName = "Flintstone",
-    //                EmployeeNumber = "1321321324",
-    //                DOB = DateTime.Parse("1964-04-23"),
-    //                SuggestionNumber = 2,
-    //                Phone = "9055551212",
-    //                //TeamID = 1,
-    //                TeamID = context.Teams.FirstOrDefault(d => d.FirstName == "2" && d.LastName == "Marketing").ID
-    //            },
-    //            new Employee
-    //            {
-    //                FirstName = "Barney",
-    //                LastName = "Rubble",
-    //                EmployeeNumber = "3213213214",
-    //                DOB = DateTime.Parse("1964-02-22"),
-    //                SuggestionNumber = 2,
-    //                Phone = "9055551213",
-    //                EmployeeRoleID = context.EmployeeRoles.FirstOrDefault(d => d.RoleName.Contains("Engineer")).ID,
-    //                //TeamID = 1,
-    //                TeamID = context.Teams.FirstOrDefault(d => d.FirstName == "2" && d.LastName == "Marketing").ID
-    //            },
-    //            new Employee
-    //            {
-    //                FirstName = "Jane",
-    //                MiddleName = "Samantha",
-    //                LastName = "Doe",
-    //                EmployeeNumber = "1231231235",
-    //                SuggestionNumber = 2,
-    //                Phone = "9055551234",
-    //                //TeamID = 1,
-    //                TeamID = context.Teams.FirstOrDefault(d => d.FirstName == "2" && d.LastName == "Marketing").ID
-    //            }); ;
-    //            context.SaveChanges();
-    //        }
-    //        //Conditions "Department"
-    //        if (!context.Conditions.Any())
-    //        {
-    //            string[] conditions = new string[] { "Production", "Implementation", "Marketing", "Management", "Instalation", "Painting", "Carving", "Cutting", "Compress", "Lagring", "Transport", "Human Resource" };
-
-    //            foreach (string condition in conditions)
-    //            {
-    //                Condition c = new Condition
-    //                {
-    //                    ConditionName = condition
-    //                };
-    //                context.Conditions.Add(c);
-    //            }
-    //            context.SaveChanges();
-    //        }
-    //        //EmployeeCondition
-    //        if (!context.EmployeeConditions.Any())
-    //        {
-    //            context.EmployeeConditions.AddRange(
-    //                new EmployeeCondition
-    //                {
-    //                    ConditionID = context.Conditions.FirstOrDefault(c => c.ConditionName == "Painting").ID,
-    //                    EmployeeID = context.Employees.FirstOrDefault(p => p.LastName == "Flintstone" && p.FirstName == "Fred").ID
-    //                },
-    //                new EmployeeCondition
-    //                {
-    //                    ConditionID = context.Conditions.FirstOrDefault(c => c.ConditionName == "Carving").ID,
-    //                    EmployeeID = context.Employees.FirstOrDefault(p => p.LastName == "Flintstone" && p.FirstName == "Fred").ID
-    //                },
-    //                new EmployeeCondition
-    //                {
-    //                    ConditionID = context.Conditions.FirstOrDefault(c => c.ConditionName == "Lagring").ID,
-    //                    EmployeeID = context.Employees.FirstOrDefault(p => p.LastName == "Flintstone" && p.FirstName == "Wilma").ID
-    //                });
-    //            context.SaveChanges();
-    //        }
-
-    //    }
-    //}
-
-
-
-
-
+    
     public static class SOInitializer
     {
         public static void Seed(IApplicationBuilder applicationBuilder)
@@ -407,59 +185,7 @@ namespace StudentOffice.Data
                     context.SaveChanges();
                 }
                 //Add Employees after Teams
-                //if (!context.Employees.Any())
-                //{
-                //    context.Employees.AddRange(
-                //    new Employee
-                //    {
-                //        FirstName = "Fred",
-                //        MiddleName = "Reginald",
-                //        LastName = "Flintstone",
-                //        EmployeeNumber = "1231231234",
-                //        DOB = DateTime.Parse("1955-09-01"),
-                //        SuggestionNumber = 6,
-                //        Phone = "9055551212",
-                //        EmployeeRoleID = context.EmployeeRoles.FirstOrDefault(d => d.RoleName.Contains("Account Manager")).ID,
-                //        TeamID = context.Teams.FirstOrDefault(d => d.FirstName == "1" && d.LastName == "Management").ID
-                //    },
-                //    new Employee
-                //    {
-                //        FirstName = "Wilma",
-                //        MiddleName = "Jane",
-                //        LastName = "Flintstone",
-                //        EmployeeNumber = "1321321324",
-                //        DOB = DateTime.Parse("1964-04-23"),
-                //        SuggestionNumber = 2,
-                //        Phone = "9055551212",
-
-                //        TeamID = context.Teams.FirstOrDefault(d => d.FirstName == "1" && d.LastName == "Management").ID
-                //    },
-                //    new Employee
-                //    {
-                //        FirstName = "Barney",
-                //        LastName = "Rubble",
-                //        EmployeeNumber = "3213213214",
-                //        DOB = DateTime.Parse("1964-02-22"),
-                //        SuggestionNumber = 2,
-                //        Phone = "9055551213",
-
-                //        EmployeeRoleID = context.EmployeeRoles.FirstOrDefault(d => d.RoleName.Contains("Engineer")).ID,
-                //        TeamID = context.Teams.FirstOrDefault(d => d.FirstName == "2" && d.LastName == "Instalation").ID
-                //    },
-                //    new Employee
-                //    {
-                //        FirstName = "Jane",
-                //        MiddleName = "Samantha",
-                //        LastName = "Doe",
-                //        EmployeeNumber = "4124124123",
-                //        SuggestionNumber = 2,
-                //        Phone = "9055551234",
-
-                //        TeamID = context.Teams.FirstOrDefault(d => d.FirstName == "3" && d.LastName == "Support").ID
-                //    });
-                //    context.SaveChanges();
-                //}
-                //Conditions "Department"
+              
                 if (!context.Conditions.Any())
                 {
                     string[] conditions = new string[] { "Production", "Implementation", "Marketing", "Management", "Instalation", "Painting", "Carving", "Cutting", "Compress", "Lagring", "Transport", "Human Resource" };
@@ -497,28 +223,28 @@ namespace StudentOffice.Data
                 }
 
                 //Add more teams
-                if (context.Teams.Count() < 13)
-                {
-                    string[] firstNames = new string[] { "12", "13", "14", "15", "16", "17", "18", "19" };
-                    string[] lastNames = new string[] { "FrontEnd", "BackEnd", "Jones", "Bloggs", "Brown", "Smith", "Daniel" };
+                //if (context.Teams.Count() < 13)
+                //{
+                //    string[] firstNames = new string[] { "12", "13", "14", "15", "16", "17", "18", "19" };
+                //    string[] lastNames = new string[] { "FrontEnd", "BackEnd", "Jones", "Bloggs", "Brown", "Smith", "Daniel" };
 
-                    //Loop through names and add more
-                    foreach (string lastName in lastNames)
-                    {
-                        foreach (string firstname in firstNames)
-                        {
-                            //Construct some details
-                            Team a = new Team()
-                            {
-                                FirstName = firstname,
-                                LastName = lastName,
+                //    //Loop through names and add more
+                //    foreach (string lastName in lastNames)
+                //    {
+                //        foreach (string firstname in firstNames)
+                //        {
+                //            //Construct some details
+                //            Team a = new Team()
+                //            {
+                //                FirstName = firstname,
+                //                LastName = lastName,
 
-                            };
-                            context.Teams.Add(a);
-                        }
-                    }
-                    context.SaveChanges();
-                }
+                //            };
+                //            context.Teams.Add(a);
+                //        }
+                //    }
+                //    context.SaveChanges();
+                //}
 
                 //So we can gererate random data, create collections of the primary keys
                 int[] teamIDs = context.Teams.Select(a => a.ID).ToArray();
